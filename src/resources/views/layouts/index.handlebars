@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Team 7</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{#each style}}
+    <link rel="stylesheet" type="text/css" href="./css/{{this}}">
+    {{/each}}
+    <link rel="stylesheet" type="text/css" href="./css/base.css" />
+    <link rel="stylesheet" type="text/css" href="./css/Kien/header.css" />
+    <link rel="stylesheet" type="text/css" href="./css/HoangDuc/footer.css" />
+
+    <link rel="shortcut icon" href="https://i.pinimg.com/originals/37/a7/6f/37a76f77b2f273151417204a9180ae21.jpg" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    {{> header}}
+
+    {{{body}}}
+
+    {{> footer}}
+
+    {{#each js}}
+    <script src="./js/{{this}}"></script>
+    {{/each}}
+</body>
+
+</html>

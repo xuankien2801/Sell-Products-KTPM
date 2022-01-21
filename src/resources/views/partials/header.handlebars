@@ -1,0 +1,35 @@
+<header class="navbar-header">
+    <nav class="navbar-nav">
+        <div class="brand">
+            <h2>Team Seven</h2>
+        </div>
+        <ul>
+            <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> Trang Chủ</a></li>
+            
+            {{#if user.fullname}}
+            <li class="nav-drop-down">
+                <a class="navbar-user"><i class="fa fa-user" aria-hidden="true">{{user.fullname}}</i></a>
+                <ul>
+
+                    <li> <a href="/profile/{{user._id}}" target="_blank"><i class="fa fa-address-book"></i> Tài
+                            Khoản</a></li>
+
+                    {{#if user.admin}}
+                        <li> <a href="/order"><i class="fa fa-clipboard"></i> Đơn Đặt Hàng </a></li>
+                        
+                        <li> <a href="/products/create-update-delete"><i class="fa fa-clipboard"></i> Sản Phẩm </a></li>
+                    {{else}}
+                        <li> <a href="/product-status/{{user._id}}"><i class="fa fa-clipboard"></i> Giỏ Hàng({{user.cart.length}}) </a></li>
+                    {{/if}}
+
+                    <li> <a href="/logout"><i class="fa fa-outdent"></i> Đăng Xuất</a> </li>
+
+                </ul>
+            </li>
+            {{else}}
+            <li><a href="/login"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Đăng Nhập</a></li>
+            <li><a href="/sign-up"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Đăng Kí</a></li>
+            {{/if}}
+        </ul>
+    </nav>
+</header>

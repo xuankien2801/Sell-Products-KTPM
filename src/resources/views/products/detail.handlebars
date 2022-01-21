@@ -1,0 +1,32 @@
+
+<main>
+    <div class="Form">
+        <h2>About Product</h2>
+            
+                <center><img class="HinhAnhChiTiet" src="{{product.image}}"/></center>
+                <div class="container">
+                    <div>ID sản phẩm: {{product._id}}</div>
+                    <div>Tên sản phẩm: {{product.name}}</div>
+                    <p class="title">Mô tả sản phẩm: {{product.description}}</p>
+                    <div>Giá sản phẩm: {{product.price}}</div>
+                    <div>Ngày đăng: {{product.createdAt}}</div>
+                    <div>Ngày cập nhật: {{product.updatedAt}}</div>
+                    <div>Người đăng: {{product.slug}}
+                    <div>Số lượng còn lại: {{product.__v}}</div>
+                    
+                </div>
+
+                <div class="detailProduct-card-status">
+                    <form action="/add-to-cart/{{product.slug}}" method="POST">
+                        <button class="detailProduct-btn-cart">
+                            <span>Add To Cart</span>
+                            <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                        </button>
+                    </form>
+                </div>
+   </div>
+    
+</main>
+
+
+

@@ -1,0 +1,26 @@
+<section class="img-background"></section>
+
+
+<main class="main-homepage">
+    {{#each products}}
+
+    <div class="home-card" id={{this._id}}>
+        <a href="/products/{{this.slug}}" target="_blank" class="home-card-image">
+            <img class="home-card-image" src="{{this.image}}" alt="{{this.description}}">
+        </a>
+        <a href="/products/{{this.slug}}" target="_blank" class="home-card-name-price">
+            <span class="home-card-name-price-name">{{this.name}}</span>
+            <h4 class="home-card-name-price-price">{{this.price}}$</h4>
+        </a>
+        <div class="home-card-status">
+            <form action="/add-to-cart/{{this.slug}}" method="POST">
+                <button class="home-btn-cart">
+                    <span>Add To Cart</span>
+                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    {{/each}}
+</main>
